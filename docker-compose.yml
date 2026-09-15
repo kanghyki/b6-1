@@ -1,0 +1,14 @@
+services:
+  sqlite:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+    container_name: my-sqlite
+
+    working_dir: /workspace
+
+    volumes:
+      - ./:/workspace
+
+    command: ["tail", "-f", "/dev/null"]
