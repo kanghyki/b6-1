@@ -4,4 +4,4 @@ RUN apk add --no-cache sqlite
 
 WORKDIR /workspace
 
-CMD ["sh"]
+ENTRYPOINT ["sqlite3"]
