@@ -19,6 +19,9 @@
 -- SQLite 전용: 테이블의 정의된 외래 키를 확인합니다.
 -- PRAGMA foreign_key_list(table_name);
 
+-- SQLite 전용: 해당 인덱스가 어떤 컬럼으로 구성되어 있는지 확인합니다.
+-- PRAGMA index_info(sqlite_autoindex_customers_1);
+
 -- customers
 PRAGMA table_info(customers);
 PRAGMA index_list(customers);
