@@ -1,9 +1,12 @@
 -- SQLite 전용: 조회 결과에 컬럼명을 표시합니다.
 .headers on
+
 -- SQLite 전용: 조회 결과를 테두리가 있는 표 형태로 출력합니다.
 .mode box
+
 -- SQLite 전용: NULL 값을 빈칸 대신 NULL 문자열로 표시합니다.
 .nullvalue NULL
+
 -- SQLite 전용: 실행되는 SQL 명령문 자체를 화면에 함께 출력합니다. (주석도 출력)
 .echo on
 

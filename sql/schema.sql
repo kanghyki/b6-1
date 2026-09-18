@@ -1,3 +1,5 @@
+-- PRAGMA는 SQLite에서 데이터베이스의 설정값을 확인하거나 바꾸고, 내부 구조/메타데이터를 조회할 때 쓰는 SQLite 전용 명령.
+
 -- SQLite 전용: FK 검사 활성화. BEGIN 이전에 실행합니다.
 PRAGMA foreign_keys = ON;
 

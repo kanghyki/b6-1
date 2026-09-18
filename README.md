@@ -24,5 +24,5 @@ docker run --rm -i -v "$(pwd)/db:/workspace" sqlite-practice my.db < sql/check.s
 Query
 
 ```sh
-docker run --rm -i -v "$(pwd)/db:/workspace" sqlite-practice my.db < sql/quries.sql
+docker run --rm -i -v "$(pwd)/db:/workspace" sqlite-practice my.db < sql/queries.sql
 ```
