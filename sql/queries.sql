@@ -132,10 +132,10 @@ ROLLBACK;
 SELECT id, name FROM customers WHERE id = 10;
 
 -- Q15: orders.customer_id 조건으로 주문을 검색하거나 조인할 때 탐색 성능을 높이기 위해 인덱스를 만든다.
--- SQLite 전용: 조회 계획을 확인한다.
+-- SQLite 전용: 쿼리 플랜을 확인합니다.
 EXPLAIN QUERY PLAN SELECT id FROM orders WHERE customer_id = 1;
 CREATE INDEX IF NOT EXISTS idx_orders_customer_id ON orders(customer_id);
--- SQLite 전용: 생성된 인덱스 목록과 변경 후 조회 계획을 확인한다.
+-- SQLite 전용: 테이블의 인덱스 목록을 확인합니다.
 PRAGMA index_list('orders');
 EXPLAIN QUERY PLAN SELECT id FROM orders WHERE customer_id = 1;
 SELECT id FROM orders WHERE customer_id = 1 ORDER BY id;
