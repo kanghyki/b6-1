@@ -33,7 +33,7 @@ LIMIT 3;
 -- Q04: 이름에 라떼가 포함되고 가격이 5,000원 이하인 메뉴를 찾는다.
 SELECT id, name, price
 FROM menu_items
-WHERE name LIKE '%라떼%' AND price <= 5000
+WHERE name LIKE '%Latte%' AND price <= 5000
 ORDER BY id;
 
 -- Q05: 모든 주문에 주문자의 이름을 붙여 조회한다.
@@ -131,7 +131,7 @@ SELECT COUNT(*) AS remaining_target FROM customers WHERE id = 10;
 ROLLBACK;
 SELECT id, name FROM customers WHERE id = 10;
 
--- Q15: 고객별 주문 검색에 사용하는 customer_id의 탐색을 돕기 위해 인덱스를 만든다.
+-- Q15: orders.customer_id 조건으로 주문을 검색하거나 조인할 때 탐색 성능을 높이기 위해 인덱스를 만든다.
 -- SQLite 전용: 조회 계획을 확인한다.
 EXPLAIN QUERY PLAN SELECT id FROM orders WHERE customer_id = 1;
 CREATE INDEX IF NOT EXISTS idx_orders_customer_id ON orders(customer_id);
