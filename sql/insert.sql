@@ -1,3 +1,6 @@
+-- SQLite 전용: FK 검사 활성화. BEGIN 이전에 실행합니다.
+PRAGMA foreign_keys = ON;
+
 BEGIN;
 
 INSERT INTO customers (id, name, email) VALUES

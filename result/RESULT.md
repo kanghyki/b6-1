@@ -1,4 +1,7 @@
 
+-- SQLite 전용: FK 검사 활성화. BEGIN 이전에 실행합니다.
+PRAGMA foreign_keys = ON;
+
 -- Q01: 현재 가격이 5,000원 이상인 메뉴를 조회한다.
 SELECT id, name, price
 FROM menu_items
