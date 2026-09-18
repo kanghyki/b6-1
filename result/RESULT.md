@@ -52,8 +52,14 @@ LIMIT 3;
 -- Q04: 이름에 라떼가 포함되고 가격이 5,000원 이하인 메뉴를 찾는다.
 SELECT id, name, price
 FROM menu_items
-WHERE name LIKE '%라떼%' AND price <= 5000
+WHERE name LIKE '%Latte%' AND price <= 5000
 ORDER BY id;
+┌────┬───────────────┬───────┐
+│ id │     name      │ price │
+├────┼───────────────┼───────┤
+│ 2  │ Cafe Latte    │ 4500  │
+│ 3  │ Vanilla Latte │ 5000  │
+└────┴───────────────┴───────┘
 
 -- Q05: 모든 주문에 주문자의 이름을 붙여 조회한다.
 SELECT o.id AS order_id, c.name AS customer_name, o.ordered_on, o.status
@@ -309,11 +315,11 @@ SELECT id, name FROM customers WHERE id = 10;
 │ 10 │ Im Haneul │
 └────┴───────────┘
 
--- Q15: 고객별 주문 검색에 사용하는 customer_id의 탐색을 돕기 위해 인덱스를 만든다.
+-- Q15: orders.customer_id 조건으로 주문을 검색하거나 조인할 때 탐색 성능을 높이기 위해 인덱스를 만든다.
 -- SQLite 전용: 조회 계획을 확인한다.
 EXPLAIN QUERY PLAN SELECT id FROM orders WHERE customer_id = 1;
 QUERY PLAN
-`--SEARCH orders USING COVERING INDEX idx_orders_customer_id (customer_id=?)
+`--SCAN orders
 CREATE INDEX IF NOT EXISTS idx_orders_customer_id ON orders(customer_id);
 -- SQLite 전용: 생성된 인덱스 목록과 변경 후 조회 계획을 확인한다.
 PRAGMA index_list('orders');
