@@ -1,4 +1,4 @@
-Docker build for SQLite and Run
+Build Dockerfile for SQLite and Run
 
 ```sh
 docker build -t sqlite-practice .
