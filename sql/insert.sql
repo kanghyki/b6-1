@@ -1,28 +1,28 @@
 BEGIN;
 
 INSERT INTO customers (id, name, email) VALUES
-    (1, '김하나', 'hana@example.test'),
-    (2, '이두리', 'duri@example.test'),
-    (3, '박세봄', 'sebom@example.test'),
-    (4, '최나래', 'narae@example.test'),
-    (5, '정다온', 'daon@example.test'),
-    (6, '강여름', 'summer@example.test'),
-    (7, '조가을', 'autumn@example.test'),
-    (8, '윤겨울', 'winter@example.test'),
-    (9, '장바다', 'sea@example.test'),
-    (10, '임하늘', 'sky@example.test');
+    (1, 'Kim Hana', 'hana@example.test'),
+    (2, 'Lee Duri', 'duri@example.test'),
+    (3, 'Park Sebom', 'sebom@example.test'),
+    (4, 'Choi Narae', 'narae@example.test'),
+    (5, 'Jung Daon', 'daon@example.test'),
+    (6, 'Kang Yeoreum', 'summer@example.test'),
+    (7, 'Jo Gaeul', 'autumn@example.test'),
+    (8, 'Yoon Gyeoul', 'winter@example.test'),
+    (9, 'Jang Bada', 'sea@example.test'),
+    (10, 'Im Haneul', 'sky@example.test');
 
 INSERT INTO menu_items (id, name, price) VALUES
-    (1, '아메리카노', 4000),
-    (2, '카페라떼', 4500),
-    (3, '바닐라라떼', 5000),
-    (4, '카푸치노', 4500),
-    (5, '카페모카', 5500),
-    (6, '초콜릿', 5000),
-    (7, '녹차', 4000),
-    (8, '레몬에이드', 5500),
-    (9, '치즈케이크', 6500),
-    (10, '크루아상', 3500);
+    (1, 'Americano', 4000),
+    (2, 'Cafe Latte', 4500),
+    (3, 'Vanilla Latte', 5000),
+    (4, 'Cappuccino', 4500),
+    (5, 'Cafe Mocha', 5500),
+    (6, 'Chocolate', 5000),
+    (7, 'Green Tea', 4000),
+    (8, 'Lemonade', 5500),
+    (9, 'Cheesecake', 6500),
+    (10, 'Croissant', 3500);
 
 INSERT INTO orders (id, customer_id, ordered_on, status) VALUES
     (1, 1, '2026-09-01', 'PAID'),
